@@ -1,11 +1,11 @@
 package edu.etec.ds.fundamentos
 
 fun obtenerTipoEntero(): String {
-    return "Int"
+  return "Int"
 }
 
 fun obtenerTipoDouble(): String {
-    return "Double"
+   return  "Double"
 }
 
 fun obtenerTipoBoolean(): String {
@@ -13,11 +13,12 @@ fun obtenerTipoBoolean(): String {
 }
 
 fun obtenerTipoString(): String {
-    return "String"
+   return "String"
 }
 
 fun obtenerTipoChar(): String {
     return "Char"
+
 }
 
 fun obtenerTipoLista(): String {
@@ -33,7 +34,7 @@ fun obtenerTipoArray(): String {
 }
 
 fun obtenerTipoNulo(): String {
-    return "Null"
+   return "Null"
 }
 
 fun obtenerTipoNullable(): String {
