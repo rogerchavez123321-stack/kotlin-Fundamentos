@@ -1,11 +1,11 @@
 package edu.etec.ds.fundamentos
 
 fun obtenerTipoEntero(): String {
-  return "Int"
+    return "Int"
 }
 
 fun obtenerTipoDouble(): String {
-   return  "Double"
+    return "Double"
 }
 
 fun obtenerTipoBoolean(): String {
@@ -13,12 +13,11 @@ fun obtenerTipoBoolean(): String {
 }
 
 fun obtenerTipoString(): String {
-   return "String"
+    return "String"
 }
 
 fun obtenerTipoChar(): String {
     return "Char"
-
 }
 
 fun obtenerTipoLista(): String {
@@ -34,7 +33,8 @@ fun obtenerTipoArray(): String {
 }
 
 fun obtenerTipoNulo(): String {
-   return "Null"
+    return "Null"
+    TODO("Retornar el nombre del tipo inferido para null")
 }
 
 fun obtenerTipoNullable(): String {
@@ -43,8 +43,10 @@ fun obtenerTipoNullable(): String {
 
 fun obtenerTipoUnit(): String {
     return "Unit"
+    TODO("Retornar el nombre del tipo de una funcion que no retorna nada")
 }
 
 fun obtenerTipoNothing(): String {
     return "Nothing"
+    TODO("Retornar el nombre del tipo de una funcion que lanza una excepcion")
 }

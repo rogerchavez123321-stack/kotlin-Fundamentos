@@ -1,98 +1,117 @@
 package edu.etec.ds.fundamentos
 
-import kotlin.collections.get
-
 fun sumarHasta(n: Int): Int {
-    return (1..n).sum()
+    var suma = 0
+    for (i in 1..n) {
+        suma += i
+    }
+    return suma
 }
 
 fun contarPares(inicio: Int, fin: Int): Int {
     var contador = 0
-    for (i in inicio..fin){
-        if (i %2 == 0){
-            contador ++
+    for (i in inicio..fin) {
+        if (i % 2 == 0) {
+            contador++
         }
     }
-
     return contador
-
 }
 
 fun fibonacci(n: Int): Int {
-    if (n <= 1) return n
+    if (n == 0) return 0
+    if (n == 1) return 1
 
     var a = 0
     var b = 1
+    var resultado = 0
 
     for (i in 2..n) {
-        val temp = a + b
+        resultado = a + b
         a = b
-        b = temp
+        b = resultado
     }
-
-    return b
+    return resultado
 }
 
 fun factorial(n: Int): Int {
-
-        var resultado = 1
-        for (i in 1..n) {
-            resultado *= i
-        }
-        return resultado
+    var resultado = 1
+    for (i in 1..n) {
+        resultado *= i
+    }
+    return resultado
 }
 
 fun encontrarMaximo(numeros: List<Int>): Int {
-  var max = numeros[0]
-    for (num in numeros)
-        if (max < num) {
-            max = num
+    var max = numeros[0]
+    for (n in numeros) {
+        if (n > max) {
+            max = n
         }
-        return  max
+    }
+    return max
 }
+
 fun encontrarMinimo(numeros: List<Int>): Int {
     var min = numeros[0]
-    for (num in numeros)
-        if (min > num) {
-            min = num
+    for (n in numeros) {
+        if (n < min) {
+            min = n
         }
-    return  min
-
+    }
+    return min
 }
 
 fun sumarLista(numeros: List<Int>): Int {
     var suma = 0
-    for (num in numeros)
-     suma += num
-        return suma
+    for (n in numeros) {
+        suma += n
+    }
+    return suma
 }
 
 fun inverter(texto: String): String {
-    return texto.reversed()
+    var resultado = ""
+    for (i in texto.length - 1 downTo 0) {
+        resultado += texto[i]
+    }
+    return resultado
 }
 
 fun contarVocales(texto: String): Int {
     var contador = 0
-    for (c in texto.lowercase()) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+    val vocales = "aeiouAEIOU"
+
+    for (c in texto) {
+        if (c in vocales) {
             contador++
         }
     }
-
     return contador
-
 }
 
 fun esPalindromo(texto: String): Boolean {
-    val limpio = texto.replace(" ", "").lowercase()
-    return limpio == limpio.reversed()
+    var limpio = ""
+
+    // quitar espacios
+    for (c in texto) {
+        if (c != ' ') {
+            limpio += c.lowercaseChar()
+        }
+    }
+
+    var invertido = ""
+    for (i in limpio.length - 1 downTo 0) {
+        invertido += limpio[i]
+    }
+
+    return limpio == invertido
 }
 
 fun tablaMultiplicar(numero: Int): List<Int> {
-    var resultado = mutableListOf<Int>()
-    for (i in 1..10)
-        resultado.add(numero * i)
-
-    return resultado
-
+    val lista = mutableListOf<Int>()
+    for (i in 1..10) {
+        lista.add(numero * i)
+    }
+    return lista
 }

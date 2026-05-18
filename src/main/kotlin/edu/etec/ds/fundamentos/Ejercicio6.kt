@@ -77,9 +77,9 @@ fun realizarOperacion(operador: Char, a: Int, b: Int): Double {
 
 fun obtenerDescuentoWhen(monto: Double): Double {
     return when {
-        monto > 200 -> monto * 0.25
-        monto > 150 -> monto * 0.15
-        monto > 100 -> monto * 0.10
+        monto <= 100 -> 10.0
+        monto <= 150 -> 15.0
+        monto <= 250 -> 25.0
         else -> 0.0
     }
 }

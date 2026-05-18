@@ -5,8 +5,7 @@ import kotlin.test.assertEquals
 
 class Ejercicio4Test {
 
-    @Test
-    fun testCondicionalSimple() {
+    @Test    fun testCondicionalSimple() {
         val resultado = evaluarPositivo(5)
         assertEquals("Positivo", resultado)
     }

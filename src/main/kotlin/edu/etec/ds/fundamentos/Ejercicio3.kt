@@ -5,21 +5,19 @@ fun saludar(): String {
 }
 
 fun saludarConNombre(nombre: String): String {
-    return "Hola, Ana!"
+    return "Hola, $nombre!"
 }
 
 fun saludarPersona(nombre: String, apellido: String): String {
-    return "Hola, Juan García!"
+    return "Hola, $nombre$apellido!"
 }
 
 fun saludarConDefault(nombre: String = "Usuario"): String {
-    return "Hola, Usuario!"
-
+    return "Hola, $nombre!"
 }
 
 fun crearSaludo(titulo: String, nombre: String): String {
     return "Hola, $titulo $nombre"
-
 }
 
 fun funcionSinRetorno(): Unit {
@@ -31,16 +29,15 @@ fun cuadrado(numero: Int): Int {
 }
 
 fun contarCaracteres(texto: String): Int {
-    TODO("Contar caracteres del string")
+    return contarCaracteres(texto)
 }
 
 fun String.cuentaCaracteres(): Int {
-    TODO("Extension para contar caracteres de un String")
+    return this.length
 }
 
 infix fun Int.esMayorQue(otro: Int): Boolean {
     return this > otro
-
 }
 
 fun sumarTodos(vararg numeros: Int): Int {
@@ -48,5 +45,5 @@ fun sumarTodos(vararg numeros: Int): Int {
 }
 
 fun aplicarOperacion(a: Int, b: Int, operacion: (Int, Int) -> Int): Int {
-    TODO("Aplicar una operacion lambda a dos numeros")
+    return operacion(a,b)
 }
